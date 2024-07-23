@@ -1,3 +1,4 @@
 node_modules
-./node_modules
-../node_modules
+
+practices/practice2/dist
+practices/dist
