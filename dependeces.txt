@@ -1,1 +1,34 @@
 Quokka.js - расширение, позволяет просматривать результат выполнения кода
+npm i typescript - компилятор typescript
+    npx tsc ./filename.ts - компиляция файла filename.ts в filename.js в текущую папку
+    npx tsc ./index.ts --outDir ./dist - компиляция index.ts в указанную парку dist
+npm i ts-node-dev - инструмент для запуска ts код на node.js в режиме разработки
+    npx ts-node-dev index.ts - запуск файла в node.js через ts-node-dev
+    npx ts-node-dev --respawn index.ts - запуск файла в node.js через ts-node-dev с автоперезапуском файла после изменения
+    npx tsc --init - создание файла tsconfig.json
+npm i @types/node - установка типов для node.js
+
+
+// операции с файлами
+mkdir dist - создание папки dist
+touch .gitignore - создание файла gitignore
+
+//настройка файла tsconfig.json
+"target": "esnext", - esnext поддержка новыми браузерами, node.js или, например, es3 - поддержка старыми браузерами
+"lib": ["dom", "esnext"], - необходимые библиотеки
+"module": "commonjs", - для node.js / esnext - для браузеров
+"outDir": "./practices/dist",  - указывается папка для компиляции файлов
+
+"strict": true,  - дб активный
+
+//настройка файла package.json
+npm init - создание файла package.json
+
+  "scripts": {
+    "start": "ts-node-dev --respawn ./src/index.ts", // путь запускаемого файла
+    "build": "tsc", // сборщик проекта, уже настроен файл tsconfig.json
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+npm start - запуск проекта, запускается тот файл, котрый указан в "start" 
+npm run build - запуск сбощика
