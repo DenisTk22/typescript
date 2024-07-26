@@ -1,5 +1,5 @@
 /**
- * Задание 4. Написание кода
+ * Задание 4. Написание кода - сделано
 Что нужно сделать:
 Используя примитивную типизацию с помощью TypeScript, напишите код, который:
 принимает строку из нескольких слов, разделённых пробелами, возвращает строку со словами в отзеркаленном виде, причём последовательность слов должна быть сохранена.
@@ -18,14 +18,13 @@
 В коде не использована типизация.
  */
 
-
-
-function reverseStringUsingReduce(str: string): string {
-    return str.split('').reduce((reversed, char) => char + reversed, '');
-}
-
-// const reversedStringReduce =
-//     reverseStringUsingReduce('Geeks For Geeks');
-// console.log(reversedStringReduce); 
-
-reverseStringUsingReduce('Geeks For Geeks');
+function reverseString(phrase: string) {
+    if (phrase.trim().length > 1) {
+        return phrase.split("").reverse().join("");
+    } 
+    else {
+        console.log('введите более одной буквы или фразу!')
+    }
+} 
+ 
+console.log(reverseString('Это пример!'));
