@@ -26,3 +26,22 @@
 В частице «Не» было две буквы, а словом с индексом 2 являлось слово «Если», поэтому оно было удалено.
 Вы столкнулись с типичной ситуацией, когда существующий код нужно модифицировать. Подумайте, легко ли вам было модифицировать код. Если да, то это отличный показатель, а если нет — подумайте, в чём именно возникали сложности. Если вы не понимаете, что стоило сделать по-другому, чтобы код модифицировался легко, задайте вопрос проверяющему куратору.
  */
+//3
+const toUpperCase = (str) => {
+    const arrayString = str.split(' ').map((el) => el[0].toUpperCase() + el.slice(1));
+
+    return arrayString.join(' ');
+};
+
+console.log(toUpperCase('Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.'));
+
+//4
+const toUpperCase4 = (str) => {
+    const arrayString = str.split(' ').map((el) => el[0].toUpperCase() + el.slice(1));
+    const a = arrayString[0].length;
+    console.log(a);
+    const arrayStringNew = arrayString.map((el, i) => el.slice(a, 1) )
+    return arrayString.join(' ');
+};
+
+console.log(toUpperCase4('Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.'));

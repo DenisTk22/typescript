@@ -32,4 +32,4 @@ const arrayDiff = (a, b) => {
     return c = a.filter(el_a => !b.includes(el_a));
 }
 
-console.log(arrayDiff([2, 2, 2, 2, 3], [2]));
+console.log(arrayDiff([1, 2], [1]));
