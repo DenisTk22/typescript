@@ -38,10 +38,10 @@ console.log(toUpperCase('Не волнуйтесь, если что-то не р
 //4
 const toUpperCase4 = (str) => {
     const arrayString = str.split(' ').map((el) => el[0].toUpperCase() + el.slice(1));
-    const a = arrayString[0].length;
-    console.log(a);
-    const arrayStringNew = arrayString.map((el, i) => el.slice(a, 1) )
-    return arrayString.join(' ');
+    const iToDelete = arrayString[0].length;
+    arrayString.splice(iToDelete, 1);
+    const arrayToString = arrayString.join(' ');
+    return arrayToString;
 };
 
 console.log(toUpperCase4('Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.'));
