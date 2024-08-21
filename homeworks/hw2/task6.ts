@@ -26,10 +26,16 @@
 
 // console.log('Users:');
 // users.forEach(logPerson);
+//const arr: { name: string; age: number }[] = [
+// { name: 'Alice', age: 27 },
+// ];
+export type User = {
+                name: string;
+                age: number;
+                occupation: string;
+            }
 
-export type User = Object;
-
-export const users: any[] = [
+export const users: {name: string; age: number; occupation: string}[] = [
     {
         name: 'Roman Abramov',
         age: 25,
@@ -42,8 +48,8 @@ export const users: any[] = [
     }
 ];
 
-export function logPerson(user: unknown) {
-console.log("-", {user.name}, {user.age});
+export function logPerson(user: User) {
+console.log(`- ${user.name}, ${user.age}`);
 }
 
 console.log('Users:');
