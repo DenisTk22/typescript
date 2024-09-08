@@ -1,4 +1,4 @@
-/**Задание 5. Объекты v2 — код
+/**Задание 5. Объекты v2 — код - сделано
  * 
 Что нужно сделать:
 -Реализуйте функцию areEqual, которая принимает два объекта в качестве аргументов. Не забывайте про типизацию.
@@ -23,7 +23,8 @@
 //     } else return false;
 // }
 
-const areEqual = (obj1, obj2) => {
+const areEqual = (obj1:{}, obj2:{}):boolean => {
+
     if(Object.keys(obj1).length === Object.keys(obj2).length) {
         return Object.keys(obj1).reduce((acc, rec) => {
             return acc && obj1[rec] === obj2[rec]

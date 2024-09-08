@@ -1,4 +1,4 @@
-/**Задание 6. Community (часть 1)
+/**Задание 6. Community (часть 1) - сделано
  * 
 Что нужно сделать:
 -Сейчас вы начнёте выполнять проект, к доработке которого будете неоднократно возвращаться.
@@ -54,3 +54,6 @@ console.log(`- ${user.name}, ${user.age}`);
 
 console.log('Users:');
 users.forEach(logPerson);
+const arr: { name: string; age: number }[] = [
+    { name: 'Alice', age: 27 },
+];

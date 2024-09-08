@@ -53,17 +53,17 @@ type User = {
         name: string;
         age: number;
         occupation: string;
-        }
+    }
         
 type Admin = {
         name: string;
         age: number;
         role: string;
-        }
+    }
         
 export type Person = (User | Admin)[]; // замените unknown на нужный тип
         
-export const persons: Person[]    = [ //замените User[] на Person[]
+export const persons: Person[] = [ //замените User[] на Person[]
 
     {
         name: 'Roman Abramov',
