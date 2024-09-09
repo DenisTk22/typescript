@@ -1,4 +1,4 @@
-/**Задание 7. Community (часть 2)
+/**Задание 7. Community (часть 2) - сделано
  * 
 Что нужно сделать:
 В этом задании нужно доработать код, чтобы раздать роль администратора всем, кто хочет помочь наполнять комьюнити фичами.
@@ -61,7 +61,7 @@ type Admin = {
         role: string;
     }
         
-export type Person = (User | Admin)[]; // замените unknown на нужный тип
+export type Person = User | Admin; // замените unknown на нужный тип
         
 export const persons: Person[] = [ //замените User[] на Person[]
 
@@ -87,7 +87,7 @@ export const persons: Person[] = [ //замените User[] на Person[]
     }
 ];
             
-export function logPerson(user: User) { // замените User на Person
+export function logPerson(user: Person) { // замените User на Person
     console.log(`- ${user.name}, ${user.age}`);
 }
             
