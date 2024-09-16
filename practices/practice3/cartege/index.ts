@@ -17,9 +17,9 @@ volume2([1, 2, 3]); //6
 // volume2([1, '2', 3]); //ts покажит ошибку
 
 //использование картежей
-type Person = [string, number];
+type Person10 = [string, number];
 
-const person: Person = ['Alex', 1983];
+const person: Person10 = ['Alex', 1983];
 person[0]; // 'Alex'
 person[1]; // 1983
 // person[2]; // undefined

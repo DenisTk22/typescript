@@ -46,3 +46,32 @@ function whatDoesThePetSay(pet: Dog | Cat): string {
     Обычный тайпгард реализуется с помощью условия if и операторов typeof, in, instanceof, операторов сравнения и так далее.
     -Пользовательский тайпгард пишется в случае, если требуется реализовать более сложную проверку типов. Пользовательский тайпгард — это специальная функция, которая типизируется с помощью типа Argument is someType и возвращает булевое значение. Если возвращается true, значит, результат соответствует типу Argument is someType. А если вернула false, то не соответствует.
  */
+
+    type Cat = {
+        name: string,
+        meow: () => string,
+    };
+        
+    type Dog = {
+        name: string,
+        bark: () => string,
+    };
+        
+    const cat: Cat = {
+        name: 'Pushok',
+        meow: () => 'meow!'
+    };
+        
+    const dog: Dog = {
+        name: 'Bobik',
+        bark: () => 'bark!',
+    };
+
+    function whatDoesThePetSay(pet: Dog | Cat): string {
+        // ---Start coding here---
+        if (pet === cat) {
+            return cat.meow()
+        }
+        return 'Nothing :('
+        // ---End coding here---
+        }

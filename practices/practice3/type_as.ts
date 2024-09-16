@@ -13,6 +13,6 @@ function format3(value: number | string): string {
 }
 
 //4. приведение типов к числу: (value as unknown as number) - это не безопасно, если value будет строкой, то будет ошибка
-function format4(value: object): string {
+function format6(value: object): string {
     return (value as unknown as number).toFixed(2); // форматирует и строки и числа так, чтобы в конце было два числа после запятой
 }
