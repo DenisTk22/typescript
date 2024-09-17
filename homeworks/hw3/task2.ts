@@ -75,3 +75,5 @@ function whatDoesThePetSay(pet: Dog | Cat): string {
         return 'Nothing :('
         // ---End coding here---
         }
+
+        whatDoesThePetSay(dog)
