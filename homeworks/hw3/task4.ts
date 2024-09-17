@@ -95,16 +95,14 @@ export const persons: Person[] = [
 export function logPerson(person: Person) {
     let additionalInformation: string;
 
-    if (role) {
-
-    }  
+    if ( typeof(person): Admin)
 
     if (person.role) {
         additionalInformation = person.role;
     } else {
         additionalInformation = person.occupation;
     }
-        console.log(- ${person.name}, ${person.age}, ${additionalInformation});
+        console.log(`- ${person.name}, ${person.age}, ${additionalInformation}`);
 }
     
 persons.forEach(logPerson);

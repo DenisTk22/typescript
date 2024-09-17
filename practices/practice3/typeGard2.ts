@@ -2,7 +2,9 @@
 type Person = {kind: 'person', name: string};
 type Animal = {kind: 'animal', color: string};
 
-function handle(value: Person | Animal): void {
+type Some = Person | Animal
+
+function handle(value: Some): void {
     value.kind; // не будет ошибка, т.к. kind присутствует у обоих типов
     // value.name; // будет ошибка, т.к. name присутствует только у одного типа
 

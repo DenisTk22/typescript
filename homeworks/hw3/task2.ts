@@ -69,9 +69,10 @@ function whatDoesThePetSay(pet: Dog | Cat): string {
 
     function whatDoesThePetSay(pet: Dog | Cat): string {
         // ---Start coding here---
-        if (pet === cat) {
-            return cat.meow()
-        }
+
+        // if (typeof pet === ) {
+        //     return pet.meow()
+        // }
         return 'Nothing :('
         // ---End coding here---
         }
