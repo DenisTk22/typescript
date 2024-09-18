@@ -1,5 +1,5 @@
 /**
- * Задание 4. Community (часть 3)
+ * Задание 4. Community (часть 3) - сделано
 Что нужно сделать:
 -Чтобы различать пользователей и администраторов, необходимо изменить функцию logPerson. Это позволит ей выводить соответствующую дополнительную информацию в зависимости от типа Person.
 -Можно использовать условный оператор if, который проверяет, является ли объект типом Admin. И если да, то использовать значение свойства role. А в противном случае использовать значение свойства occupation.
@@ -95,9 +95,7 @@ export const persons: Person[] = [
 export function logPerson(person: Person) {
     let additionalInformation: string;
 
-    if ( typeof(person): Admin)
-
-    if (person.role) {
+    if ('role' in person) {
         additionalInformation = person.role;
     } else {
         additionalInformation = person.occupation;
