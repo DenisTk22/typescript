@@ -41,7 +41,7 @@ function isString(value: unknown): value is string {
 
 function format4(value: number | string): string {
     let amount: number = 0;
-
+    
     //тайпгард
     if (isString(value)) {
         amount = parseFloat(value);

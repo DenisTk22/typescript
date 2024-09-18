@@ -67,14 +67,38 @@ function whatDoesThePetSay(pet: Dog | Cat): string {
         bark: () => 'bark!',
     };
 
-    function whatDoesThePetSay(pet: Dog | Cat): string {
-        // ---Start coding here---
+    function isDog(pet: Dog | Cat) {
+        if ('bark' in pet) {
+            return pet.bark();
+        }
+    }
 
-        // if (typeof pet === ) {
-        //     return pet.meow()
+    function isCat(pet: Dog | Cat) {
+        if ('meow' in pet) {
+            return pet.meow();
+        }
+    }
+
+    function whatDoesThePetSay(pet: Dog | Cat) {
+        let petSaid: string = '';
+
+        // if ('bark' in pet) {
+        //     petSaid = pet.bark();
         // }
-        return 'Nothing :('
-        // ---End coding here---
+        // if ('meow' in pet) {
+        //     petSaid = pet.meow();
+        // }
+
+        if (isCat(pet)) {
+            petSaid = cat.meow();
         }
 
-        whatDoesThePetSay(dog)
+        if (isDog(pet)) {
+            petSaid = dog.bark();
+        }
+
+        console.log(petSaid);
+    };
+
+    whatDoesThePetSay(dog);
+    whatDoesThePetSay(cat);
